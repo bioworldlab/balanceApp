@@ -1,0 +1,50 @@
+<div ng-include="'components/shell/shell.html'"></div>
+<md-content class="md-padding">
+    <md-card class="register-card">
+      <md-card-content>
+        <h2 class="md-title">Sign up</h2>
+        <form name="form" ng-submit="register(form)" novalidate>
+          <md-input-container>
+            <label>First Name</label>
+            <input required name="fname" ng-model="user.fname">
+            <div ng-messages="form.fname.$error">
+              <div ng-message="required">This is required.</div>
+            </div>
+          </md-input-container>
+          <md-input-container>
+            <label>Last Name</label>
+            <input required name="lname" ng-model="user.lname">
+            <div ng-messages="form.lname.$error">
+              <div ng-message="required">This is required.</div>
+            </div>
+          </md-input-container>
+          <md-input-container>
+            <label>Email</label>
+            <input name="email" type="email" ng-model="user.email">
+            <!-- <div ng-messages="form.email.$error">
+              <div ng-message="required">This is required.</div>
+            </div> -->
+          </md-input-container>
+          <md-input-container>
+            <label>Username</label>
+            <input required name="uname" ng-model="user.uname">
+            <div ng-messages="form.uname.$error">
+              <div ng-message="required">This is required.</div>
+            </div>
+          </md-input-container>
+          <md-input-container>
+            <label>Password</label>
+            <input required type="password" name="password" ng-model="user.password">
+            <div ng-messages="form.password.$error">
+              <div ng-message="required">This is required.</div>
+            </div>
+          </md-input-container>
+          <div layout="row">
+            <md-button class="md-primary" type="submit">Sign up</md-button>
+            <md-button flex type="submit" href="/">Login</md-button>
+          </div>
+        </form>
+      </md-card-content>
+    </md-card>
+</md-content>
+
